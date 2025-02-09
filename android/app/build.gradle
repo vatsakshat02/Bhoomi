@@ -1,0 +1,71 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    // Define your app's namespace.
+    namespace = "com.example.bhoomi"
+    compileSdkVersion 33
+
+    // Use Flutter's versions for compileSdk and ndkVersion.
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 33
+        multiDexEnabled true
+    }
+
+    // Enable generation of the BuildConfig class.
+    buildFeatures {
+        buildConfig true
+    }
+
+    // (Optional) Define signing configurations.
+    signingConfigs {
+        debug {
+            // Debug signing config is auto-generated.
+        }
+    }
+
+    // Set Java compatibility options.
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    // Set Kotlin JVM target.
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    defaultConfig {
+        // Specify your unique Application ID.
+        applicationId = "com.example.bhoomi"
+        // Configure SDK versions and app versioning using Flutter variables.
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // For now, we use the debug signing configuration for release builds.
+            // Make sure to configure your release signing settings for production.
+            signingConfig = signingConfigs.debug
+
+            // (Optional) Enable code shrinking, obfuscation, etc.
+            // minifyEnabled true
+            // proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+flutter {
+    // Specify the Flutter source relative to the android folder.
+    source = "../.."
+}

@@ -38,5 +38,5 @@
 - **Frameworks**: Flask (Backend), TensorFlow (AI), OpenAI API
 - **Hardware**: Drones with multispectral cameras, soil sensors (pH, temperature, humidity, and nutrient level detection)
 - **APIs**: FSRCNN for super-resolution image enhancement, OpenAI API for chatbot and language processing
-- **Disease Detection Model**: A custom-trained AI model for crop disease detection, which analyzes images uploaded by farmers to detect diseases. The trained model and its dataset are available on [Google Drive](<(https://drive.google.com/file/d/1_Sazev_iVS9XlBaLhSBf-oypr9jkuYIS/view?usp=sharing)>).
+- **Disease Detection Model**: A custom-trained AI model for crop disease detection, which analyzes images uploaded by farmers to detect diseases. The trained model and its dataset are available on [Google Drive](https://drive.google.com/file/d/1_Sazev_iVS9XlBaLhSBf-oypr9jkuYIS/view?usp=sharing).
 
